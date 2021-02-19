@@ -2,11 +2,11 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-public class RNAShield extends Char {
+public class Shield extends Char {
     //defiens width and height
     int width, height;
     //constuctor
-    public RNAShield(int x, int y, int width, int height, Color color){
+    public Shield(int x, int y, int width, int height, Color color){
         super(x, y, color);
         this.width = width;
         this.height = height;
@@ -19,7 +19,7 @@ public class RNAShield extends Char {
     public int getHeight() {
         return height;
     }
-    //draws the RNA shields
+    //draws the plasma shields
     @Override
     public void draw(Graphics g) {
         g.setColor(color);
@@ -29,7 +29,7 @@ public class RNAShield extends Char {
     //defiens and returns hitbox
     @Override
     public Rectangle getBounds() {
-        Rectangle RNAShieldHitbox = new Rectangle(this.getX(), this.getY(), width, height);
-        return RNAShieldHitbox;
+        Rectangle ShieldHitbox = new Rectangle(this.getX(), this.getY(), width, height);
+        return ShieldHitbox;
     }
 }

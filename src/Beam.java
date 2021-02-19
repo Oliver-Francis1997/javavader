@@ -2,15 +2,15 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.Color;
 
-public class Antibody extends MovingChar {
+public class Beam extends MovingChar {
     int width, height;
-    //antibody constructor
-    public Antibody(int x, int y, Color color) {
+    //beam constructor
+    public Beam(int x, int y, Color color) {
         super(x, y, 0, 0, color);
         width = (int) Math.round(Board.getBW() * 0.015);
         height = (int) Math.round(Board.getBH() * 0.03);
     }
-    //draw methord for the antibody
+    //draw methord for the beam
     @Override
     public void draw(Graphics g) {
         g.setColor(color);
@@ -19,10 +19,10 @@ public class Antibody extends MovingChar {
     //hitbox generation
     @Override
     public Rectangle getBounds() {
-        Rectangle antibodyHitbox = new Rectangle(x, y, width, height);
-        return antibodyHitbox;
+        Rectangle beamHitbox = new Rectangle(x, y, width, height);
+        return beamHitbox;
     }
-    //move methord for the antibody 
+    //move methord for the beam 
     //travals at a speed of 2% of the height of the game window per tick
     @Override
     public void move() {

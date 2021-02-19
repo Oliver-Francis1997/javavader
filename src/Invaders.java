@@ -6,22 +6,21 @@ import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 
 
-public class Virus extends MovingChar {
+public class Invaders extends MovingChar {
     //defines image
-    //image source https://pngtree.com/freepng/coronavirus-covid-19-element_5340536.html
-    ImageIcon VirusIcon= new ImageIcon("images/Coronavirus_Cell.png");
+    ImageIcon InvadersIcon= new ImageIcon("");
     
     // defiens width and height 
     int width, height;
 
-    public Virus(int x, int y, int xS, int yS, Color color, int width, int height) {
+    public Invaders(int x, int y, int xS, int yS, Color color, int width, int height) {
         super(x, y, xS, yS, color);
         this.width = width;
         this.height = height;
         // imports the image and scales to the height and width of the aliens
-        Image convert = VirusIcon.getImage();
-        Image ScaleVirusIcon = convert.getScaledInstance(this.height, this.width, Image.SCALE_SMOOTH);
-        VirusIcon = new ImageIcon(ScaleVirusIcon);
+        Image convert = InvadersIcon.getImage();
+        Image ScaleInvadersIcon = convert.getScaledInstance(this.height, this.width, Image.SCALE_SMOOTH);
+        InvadersIcon = new ImageIcon(ScaleInvadersIcon);
 
     }
     //returns object width
@@ -35,8 +34,8 @@ public class Virus extends MovingChar {
     //draws image if its there else draws a green box
     @Override
     public void draw(Graphics g) {
-        if(VirusIcon.getIconWidth() > 1){
-            VirusIcon.paintIcon(null, g, this.getX(), this.getY());
+        if(InvadersIcon.getIconWidth() > 1){
+            InvadersIcon.paintIcon(null, g, this.getX(), this.getY());
         }
         else{
             g.setColor(Color.GREEN);
@@ -46,8 +45,8 @@ public class Virus extends MovingChar {
     //sets and returns hitbox
     @Override
     public Rectangle getBounds() {
-        Rectangle virusHitBox = new Rectangle(x, y, width, height);
-        return virusHitBox;
+        Rectangle invadersHitBox = new Rectangle(x, y, width, height);
+        return invadersHitBox;
     }
     //move methord
     @Override
