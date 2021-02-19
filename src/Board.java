@@ -27,8 +27,8 @@ public class Board extends JPanel implements Runnable {
   public static Dimension d = new Dimension(BOARD_WIDTH, BOARD_HEIGHT);
   private final int TICK_RATE = 128;
 
-  // image source https://wallpaperaccess.com/blood-cells
-  private ImageIcon bgIcon = new ImageIcon("images/blood.jpg");
+  
+  private ImageIcon bgIcon = new ImageIcon("");
   private Image convert = bgIcon.getImage();
   private Image ScalebgIcon = convert.getScaledInstance(BOARD_WIDTH, BOARD_HEIGHT, Image.SCALE_SMOOTH);
   private ImageIcon bgIconScaled = new ImageIcon(ScalebgIcon);
@@ -431,7 +431,7 @@ public class Board extends JPanel implements Runnable {
     //set size
     this.setSize(d);
     this.setPreferredSize(d);
-    this.setBackground(Color.WHITE);
+    this.setBackground(Color.BLACK);
 
     // Register KeyboardController as KeyListener
     controller = new KeyboardListener();
