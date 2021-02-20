@@ -27,8 +27,8 @@ public class Board extends JPanel implements Runnable {
   public static Dimension d = new Dimension(BOARD_WIDTH, BOARD_HEIGHT);
   private final int TICK_RATE = 128;
 
-  
-  private ImageIcon bgIcon = new ImageIcon("");
+  //set background image
+  private ImageIcon bgIcon = new ImageIcon("images/space.jpg");
   private Image convert = bgIcon.getImage();
   private Image ScalebgIcon = convert.getScaledInstance(BOARD_WIDTH, BOARD_HEIGHT, Image.SCALE_SMOOTH);
   private ImageIcon bgIconScaled = new ImageIcon(ScalebgIcon);
@@ -432,7 +432,7 @@ public class Board extends JPanel implements Runnable {
     this.setSize(d);
     this.setPreferredSize(d);
     this.setBackground(Color.BLACK);
-
+  
     // Register KeyboardController as KeyListener
     controller = new KeyboardListener();
     this.addKeyListener(controller);

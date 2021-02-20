@@ -1,4 +1,4 @@
-
+import java.awt.Color;
 import java.awt.EventQueue;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -21,6 +21,7 @@ public class Main extends JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         //this.setIconImage(icon.getImage());
+        this.setBackground(Color.BLACK);
         //runs the game board
         board.run();
     }
